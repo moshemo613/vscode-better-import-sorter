@@ -1,0 +1,109 @@
+{
+  "name": "better-import-sorter",
+  "displayName": "Better Import Sorter",
+  "description": "Intelligently sort imports by length, alphabetical order, and context",
+  "version": "0.0.5",
+  "engines": {
+    "vscode": "^1.68.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "keywords": [
+    "js",
+    "jsx",
+    "ES6",
+    "vue",
+    "sort",
+    "react",
+    "angular",
+    "ES2015",
+    "import",
+    "imports",
+    "sorting",
+    "formatter",
+    "javascript",
+    "sort-import"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onCommand:better-import-sorter.sort"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "title": "Sort Imports",
+        "command": "better-import-sorter.sort"
+      }
+    ],
+    "configuration": {
+      "title": "Better Import Sorter Configuration",
+      "properties": {
+        "better-import-sorter.onSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically sort imports on save."
+        },
+        "better-import-sorter.suppressWarnings": {
+          "type": "boolean",
+          "default": false,
+          "description": "Suppress warnings when sorting fails."
+        },
+        "better-import-sorter.languages": {
+          "type": "array",
+          "default": [
+            "javascript",
+            "typescript"
+          ],
+          "description": "Languages to sort on save."
+        },
+        "better-import-sorter.sort": {
+          "type": "string",
+          "default": "shortestFirst",
+          "enum": [
+            "shortestFirst",
+            "longestFirst",
+            "alphabeticalAsc",
+            "alphabeticalDesc"
+          ],
+          "description": "Specify the sort order for imports."
+        },
+        "better-import-sorter.groupByFolder": {
+          "type": "boolean",
+          "default": false,
+          "description": "Group imports by folder with a line break between different folders."
+        }
+      }
+    }
+  },
+  "main": "./extension.js",
+  "icon": "assets/logo.png",
+  "publisher": "moshemo613",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moshemo613/vscode-better-import-sorter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moshemo613/vscode-better-import-sorter/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.68.0",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2",
+    "@vscode/test-electron": "^2.1.3"
+  }
+}
