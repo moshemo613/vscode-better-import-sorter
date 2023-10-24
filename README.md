@@ -1,9 +1,6 @@
-Certainly! Here's the updated README.md file incorporating the modifications discussed:
-
-````markdown
 # Better Import Sorter
 
-This extension is a fork of [Sort Imports by Length](https://github.com/mario-iliev/vscode-sort-lengthy-imports) by Mario Iliev and allows for an enhanced, opinionated sorting of imports by length, alphabetical order, and context. It can be configured to work on file save.
+This extension is a fork of [Sort Imports by Length](https://github.com/mario-iliev/vscode-sort-lengthy-imports) by Mario Iliev and allows for an enhanced sorting of imports by length, alphabetical order, and context. It can be configured to work on file save.
 
 ## Example
 
@@ -17,6 +14,7 @@ import Text from "./Text";
 import { MyFancyComponent } from "../common/MyFancyComponent";
 import styled, { createGlobalStyle } from "styled-components";
 ```
+
 ````
 
 You can sort and organize them as follows:
@@ -137,3 +135,4 @@ For any issues or if you'd like to contribute, please visit the [GitHub reposito
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+````
